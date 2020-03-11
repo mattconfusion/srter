@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Srter\\": "src/"
+        }
+    },
+    "require": {
+        "wyndow/fuzzywuzzy": "^0.6.0",
+        "php-di/php-di": "^6.0"
+    }
+}
