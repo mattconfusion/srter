@@ -2,7 +2,7 @@
 
 namespace Srter\FileManager;
 
-class Folder {
+class Folder implements File {
 
     private $folder;
 
@@ -11,8 +11,13 @@ class Folder {
         $this->folder = $folder;
     }
 
-    public function getFolder(): string
+    public function getPath(): string
     {
         return $this->folder;
+    }
+
+    public function getName(): string
+    {
+        return \dirname($this->folder);
     }
 }

@@ -8,6 +8,6 @@ class SrtFileFinder implements FileFinder
 
     public function scanForFiles(Folder $folder): array
     {
-        return $this->rsearch($folder->getFolder(), '/(\w|\.|:|-)+(\.srt)/');
+        return $this->rsearch($folder->getPath(), '/(\w|\.|:|-)+(\.srt)/');
     }
 }
