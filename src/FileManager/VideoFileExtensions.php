@@ -9,7 +9,7 @@ trait VideoFileExtensions {
      *
      * @return array
      */
-    public function getVideoExtList(): array {
+    public function getList(): array {
         return [
             'mpg',
             'mp2',
