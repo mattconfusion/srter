@@ -11,23 +11,24 @@ trait VideoFileExtensions {
      */
     public function getVideoExtList(): array {
         return [
-            "mpg",
-            "mp2",
-            "mpeg",
-            "mpe",
-            "mpv",
-            "mp4",
-            "m4p",
-            "m4v",
-            "avi",
-            "mov",
-            "qt",
-            "xvid",
-            "dvix",
-            "webm",
-            "ogg",
-            "wmv",
-            "flv"
+            'mpg',
+            'mp2',
+            'mpeg',
+            'mpe',
+            'mpv',
+            'mp4',
+            'm4p',
+            'm4v',
+            'mkv',
+            'avi',
+            'mov',
+            'qt',
+            'xvid',
+            'dvix',
+            'webm',
+            'ogg',
+            'wmv',
+            'flv'
         ];
     }
 }

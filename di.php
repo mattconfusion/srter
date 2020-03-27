@@ -6,6 +6,7 @@ use Srter\FileManager\Folder;
 use Srter\FileManager\SrtCollection;
 use Srter\FileManager\SrtFile;
 use Srter\FileManager\SrtFileFinder;
+use Srter\FileManager\VideoFileFinder;
 
 require 'vendor/autoload.php';
 
@@ -19,4 +20,8 @@ $collection = new SrtCollection(...[]);
     $collection->addFile(new SrtFile($filePath));
 });
 
-var_export($collection);
+$finder2 = new VideoFileFinder();
+$videoFiles = $finder2->scanForFiles(new Folder($argv[1]));
+var_export($videoFiles);
+
+

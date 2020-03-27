@@ -2,7 +2,7 @@
 
 namespace Srter\FileManager;
 
-class SrtCollection implements FileCollection {
+class VideoCollection implements FileCollection {
 
     private $collection = [];
 
@@ -26,23 +26,11 @@ class SrtCollection implements FileCollection {
         return $this->collection;
     }
 
-    public function extractNames(): array
-    {
-        $names = [];
-
-        foreach ($this->collection as $file)
-        {
-            $names = $file->getName();
-        }
-
-        return $names;
-    }
-
-    private function add(SrtFile $file) {
+    private function add(VideoFile $file) {
         $this->collection[$file->getPath()] = $file;
     }
 
-    private function remove(SrtFile $file) {
+    private function remove(VideoFile $file) {
         unset($this->collection[$file->getPath()]);
     }
 }

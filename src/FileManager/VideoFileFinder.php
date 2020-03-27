@@ -9,7 +9,7 @@ class VideoFileFinder implements FileFinder
 
     public function scanForFiles(Folder $folder): array
     {
-        $regex = '/(\w|\.|:|-)+(\.' + \implode('|', $this->getVideoExtList()) + ')/';
+        $regex = '/(\w|\.|:|-)+(\.' . \implode('|', $this->getVideoExtList()) . ')/';
         return $this->rsearch($folder->getPath(), $regex);
     }
 }
