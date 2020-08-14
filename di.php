@@ -13,6 +13,7 @@ require 'vendor/autoload.php';
 $builder = new \DI\Container();
 $finder = new SrtFileFinder();
 $srtFiles = $finder->scanForFiles(new Folder($argv[1]));
+echo "SRT FILES" . PHP_EOL;
 var_export($srtFiles);
 
 $collection = new SrtCollection(...[]);
@@ -22,6 +23,12 @@ $collection = new SrtCollection(...[]);
 
 $finder2 = new VideoFileFinder();
 $videoFiles = $finder2->scanForFiles(new Folder($argv[1]));
+echo "Video FILES" . PHP_EOL;
 var_export($videoFiles);
+
+
+//now build a MatchMaker and invoke MatchProcess on the two collections
+//now show the matches
+//if matches are agreed upon, call the MatchFinalizer
 
 
